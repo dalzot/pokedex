@@ -44,10 +44,10 @@ class PokemonModel {
     base_experience = json['base_experience'];
     species = json['species'] != null ? AbilityModel.fromJson(json['species']) : null;
 
-    if(json['sprites'] != null && json['sprites']['official-artwork'] != null && json['sprites']['official-artwork']['front_default'] != null) {
-      image = json['sprites']['official-artwork']['front_default'];
-    } else if(json['sprites'] != null && json['sprites']['home'] != null && json['sprites']['home']['front_default'] != null) {
-      image = json['sprites']['home']['front_default'];
+    if(json['sprites'] != null && json['sprites']['other']['official-artwork'] != null && json['sprites']['other']['official-artwork']['front_default'] != null) {
+      image = json['sprites']['other']['official-artwork']['front_default'];
+    } else if(json['sprites'] != null && json['sprites']['other']['home'] != null && json['sprites']['other']['home']['front_default'] != null) {
+      image = json['sprites']['other']['home']['front_default'];
     }
     
     if (json['stats'] != null) {
